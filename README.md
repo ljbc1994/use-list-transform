@@ -1,6 +1,11 @@
 # 🤖 use-list-transform
 A tiny, simple React hook that handles performing functions on an array. In other words, you provide the functions for sorting, filtering and manipulating the array and the hook will return the transformed array. Supports promise transforms.
 
+- TypeScript support
+- Promise-based transforms
+- Tiny API
+- Tiny size
+
 ## Install
 
 ```bash
@@ -102,7 +107,7 @@ const SearchList = ({ searchList }) => {
 }
 ```
 
-### Promise-based tranform requests (i.e. web workers)
+### Promise-based transform requests (i.e. web workers)
 
 ```jsx
 // `greenlet` - moves async functions into its own threads
