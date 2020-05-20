@@ -1,0 +1,12 @@
+node_modules
+dist
+esm
+*.log
+*.tgz
+.env
+.next
+.DS_Store
+.idea
+examples/**/package.lock
+report*
+coverage*

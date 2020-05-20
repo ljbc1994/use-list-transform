@@ -1,0 +1,71 @@
+{
+  "name": "use-list-transform",
+  "version": "0.1.0",
+  "description": "🤖 Filter, sort, manipulate your arrays in a react hook.",
+  "main": "./dist/index.js",
+  "module": "./esm/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**",
+    "esm/**"
+  ],
+  "scripts": {
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:cjs": "ncc build src/index.ts -o dist -m -e react",
+    "build:esm": "tsc --target ESNext --module ES6 --outDir esm",
+    "watch": "tsc --watch",
+    "types:check": "tsc --noEmit",
+    "format": "prettier --write \"{src,test,examples}/**/*.{ts,tsx}\"",
+    "lint": "eslint \"{src,test,examples}/**/*.{ts,tsx}\"",
+    "lint:fix": "eslint \"{src,test,examples}/**/*.{ts,tsx}\" --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ljbc1994/use-list-transform.git"
+  },
+  "author": "@ljbc1994",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ljbc1994/use-list-transform/issues"
+  },
+  "homepage": "https://github.com/ljbc1994/use-list-transform#readme",
+  "devDependencies": {
+    "@testing-library/react": "^10.0.4",
+    "@testing-library/react-hooks": "^3.2.1",
+    "@types/jest": "^25.2.2",
+    "@types/node": "11.12.0",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "2.5.0",
+    "@typescript-eslint/parser": "2.5.0",
+    "@zeit/ncc": "^0.22.2",
+    "eslint": "6.6.0",
+    "eslint-config-prettier": "6.5.0",
+    "eslint-plugin-react-hooks": "^4.0.2",
+    "husky": "2.4.1",
+    "jest": "^26.0.1",
+    "lint-staged": "^10.2.4",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
+    "react-use": "^14.2.0",
+    "ts-jest": "^26.0.0",
+    "typescript": "^3.9.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run types:check && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run lint:fix",
+      "npm run format",
+      "git add"
+    ]
+  }
+}
