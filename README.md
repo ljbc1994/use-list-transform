@@ -1,6 +1,7 @@
 # 🤖 use-list-transform
 
 [![Build Status](https://travis-ci.com/ljbc1994/use-list-transform.svg?branch=master)](https://travis-ci.com/ljbc1994/use-list-transform)
+[![Coverage Status](https://coveralls.io/repos/github/ljbc1994/use-list-transform/badge.svg)](https://coveralls.io/github/ljbc1994/use-list-transform)
 
 
 A tiny, simple React hook that handles performing functions on an array. In other words, you provide the functions for sorting, filtering and manipulating the array and the hook will return the transformed array. Supports promise transforms.
