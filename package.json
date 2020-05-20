@@ -1,6 +1,6 @@
 {
   "name": "use-list-transform",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "🤖 Filter, sort, manipulate your arrays in a react hook.",
   "main": "./dist/index.js",
   "module": "./esm/index.js",
