@@ -9,6 +9,12 @@
     "dist/**",
     "esm/**"
   ],
+  "keywords": [
+    "react",
+    "hooks",
+    "array",
+    "transform"
+  ],
   "scripts": {
     "build": "npm run build:esm && npm run build:cjs",
     "build:cjs": "ncc build src/index.ts -o dist -m -e react",
@@ -27,7 +33,7 @@
     "url": "git+https://github.com/ljbc1994/use-list-transform.git"
   },
   "author": "@ljbc1994",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ljbc1994/use-list-transform/issues"
   },
@@ -42,6 +48,7 @@
     "@typescript-eslint/eslint-plugin": "2.5.0",
     "@typescript-eslint/parser": "2.5.0",
     "@zeit/ncc": "^0.22.2",
+    "coveralls": "^3.1.0",
     "eslint": "6.6.0",
     "eslint-config-prettier": "6.5.0",
     "eslint-plugin-react-hooks": "^4.0.2",

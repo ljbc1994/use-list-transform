@@ -1,19 +1,5 @@
-import {
-  useReducer,
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  Reducer,
-} from 'react';
+import { useReducer, useCallback, useEffect, useRef, Reducer } from 'react';
 import usePrevious from './usePrevious';
-
-const useIsomorphicLayoutEffect =
-  typeof window !== 'undefined' &&
-  typeof window.document !== 'undefined' &&
-  typeof window.document.createElement !== 'undefined'
-    ? useLayoutEffect
-    : useEffect;
 
 export type TransformerParams<TListItem, TTransformData> = {
   list: TListItem[];
@@ -276,11 +262,11 @@ function useListTransform<TTransformData extends object, TListItem>(
     isLatestTransform,
   ]);
 
-  useIsomorphicLayoutEffect(() => {
+  useEffect(() => {
     transforms.current = toArray(options.transform);
   });
 
-  useIsomorphicLayoutEffect(() => {
+  useEffect(() => {
     transformList();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.data, options.list]);
