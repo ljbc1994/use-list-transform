@@ -1,6 +1,6 @@
 {
   "name": "use-list-transform",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "🤖 Filter, sort, manipulate your arrays in a react hook.",
   "main": "./dist/index.js",
   "module": "./esm/index.js",
@@ -56,11 +56,14 @@
     "jest": "^26.0.1",
     "lint-staged": "^10.2.4",
     "prettier": "^2.0.5",
-    "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react": "^16.13.1",
     "react-test-renderer": "^16.13.1",
     "ts-jest": "^26.0.0",
     "typescript": "^3.9.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
   },
   "husky": {
     "hooks": {
