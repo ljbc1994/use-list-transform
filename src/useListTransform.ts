@@ -7,7 +7,7 @@ export type TransformerParams<TListItem, TTransformData> = {
   previousData: TTransformData;
 };
 
-type MapTranformerReturnType<TListItem> = (
+type MapTransformerReturnType<TListItem> = (
   item: TListItem,
   index?: number
 ) => boolean;
@@ -18,7 +18,7 @@ export type Transformer<TListItem, TTransformData> = (
 
 export type MapTransformer<TListItem, TTransformData> = (
   params: TransformerParams<TListItem, TTransformData>
-) => MapTranformerReturnType<TListItem>;
+) => MapTransformerReturnType<TListItem>;
 
 export type AllTransformers<TListItem, TTransformData> =
   | Transformer<TListItem, TTransformData>
