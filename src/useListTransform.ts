@@ -137,9 +137,9 @@ function useListTransform<TTransformData extends object, TListItem>(
     error: undefined,
   });
 
-  const onLoading = options.onLoading ?? noop;
-  const onError = options.onError ?? noop;
-  const onListUpdate = options.onListUpdate ?? noop;
+  const onLoading = options.onLoading || noop;
+  const onError = options.onError || noop;
+  const onListUpdate = options.onListUpdate || noop;
 
   /**
    * The transform list id to denote the current
